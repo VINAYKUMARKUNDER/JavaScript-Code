@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sample Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="https://aaxlejobz.com/">
+	  	<img src="aaxle.png" alt="Logo" width="100" height="40">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/About/45/page">About</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/services">Services</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/team">Features</a>
+	      </li>
+        <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/career">Career</a>
+	      </li>
+        <li class="nav-item">
+	        <a class="nav-link" href="https://aaxlejobz.com/contact">Contact</a>
+	      </li>
+        <li class="nav-item">
+	        <a class="nav-link" href="https://job.aaxlejobz.com/job-openings/">Job</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="container">
+    <div class="p-3 mb-2 bg-warning text-dark text-center" id="app">Application From</div>
+		<form id="email_form">
+			<div class="form-group">
+				<label for="first-name" id="name">First Name</label>
+				<input type="text" class="form-control" id="first-name" placeholder="Enter First Name" required>
+			</div>
+			<div class="form-group">
+				<label for="last-name" id="about">Last Name</label>
+				<input type="text" class="form-control" id="last-name" placeholder="Enter Last Name" required>
+			</div>
+			<div class="form-group">
+				<label for="email" id="email">Email</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" placeholder="Enter Phone" required>
+			</div>
+			<div class="form-group">
+				<label for="experience">Total Experience</label>
+				<input type="number" class="form-control" id="experience" placeholder="Enter Total Experience" required>
+			</div>
+			<div class="form-group">
+				<label for="notice-period">Notice Period</label>
+				<select class="form-control" id="notice-period" required>
+				  <option value="">Select Notice Period</option>
+          <option value="0">Immediate Join</option>
+				  <option value="15">15 Days</option>
+				  <option value="30">30 Days</option>
+				  <option value="45">45 Days</option>
+				  <option value="60">60 Days</option>
+          <option value="90">90 Days</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="current-designation" id="subject">Current Designation</label>
+				<input type="text" class="form-control"
+        id="current-designation" placeholder="Enter Current Designation" required>
+			</div>
+			<div class="form-group">
+				<label for="current-ctc">Current CTC</label>
+				<input type="number" class="form-control" id="current-ctc" placeholder="Enter Current CTC" required>
+			</div>
+			<div class="form-group">
+				<label for="expected-ctc">Expected CTC</label>
+				<input type="number" class="form-control" id="expected-ctc" placeholder="Enter Expected CTC" required>
+			</div>
+			<div class="form-group">
+				<label for="join-date">When can you join us?</label>
+				<input type="date" class="form-control" id="join-date" placeholder="Enter Joining Date" required>
+			</div>
+			<div class="form-group">
+				<label for="resume">Upload Resume</label>
+				<input type="file" class="form-control-file" id="resume" required>
+			</div>
+			<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+    <footer class="footer mt-auto py-3">
+      <div class="p-3 mb-2 bg-dark text-dark text-center">
+        <span class="text-muted">copyright &copy; 2023 aaxlejobz. All rights reserved.</span>
+      </div>
+    </footer>
+	</div>
+
+  <div
+  class="modal fade"
+  id="popupModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="popupModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <span id="popup-message"></span>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
