@@ -48,7 +48,7 @@
 	
 	<div class="container">
     <div class="p-3 mb-2 bg-warning text-dark text-center" id="app">Application Form</div>
-		<form id="form" onsubmit="sendEmail(); reset(); return false;">
+		<form id="form" onsubmit="sendEmail()">
 			<div class="form-group">
 				<label for="first-name" id="firstName">First Name</label>
 				<input type="text" class="form-control" id="first-name" placeholder="Enter First Name" required>
@@ -152,7 +152,7 @@
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-<script>
+<!-- <script>
 
 	function sendEmail(){
 		Email.send({
@@ -168,7 +168,7 @@
 		);
 	}
 
-</script>
+</script> -->
 
 
 </body>
