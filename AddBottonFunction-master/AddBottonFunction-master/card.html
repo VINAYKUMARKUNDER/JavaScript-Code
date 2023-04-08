@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="e-com.css">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Cart</title>
+
+</head>
+<body>
+
+    <div id="nav">
+        <div>
+            <h2>Rebok</h2>
+        </div>
+        <div>
+            <h2><a href="index.html">E-com</a></h2>
+            <h2><a href="women.html">Women's</a></h2>
+            <h2><a href="card.html">Card</a></h2>
+            <h2></h2>
+        </div>
+    </div>
+    <div id="price-section">
+        <h2 id="totalPrice">I am Total Price</h2>
+        <button id="see">See Price</button>
+        <br>
+        <p id="instruction">If MASAI30 applay then grt 30% discount <br>any other promo code apply then 10% discount</p>
+        <input type="text" id="promo" placeholder="Enter Promocode">
+        <p id="seepromo"></p>
+        <input type="submit" id="applay" >
+    </div>
+    <div class="main">
+
+    </div>
+</body>
+</html>
+
+    <script>
+        var data=JSON.parse(localStorage.getItem("data")) || [];
+        console.log(data);
+        display(data);
+
+        
+        function display(data){
+            var priceArr=0;
+        data.forEach(function(el){
+
+            var div=document.createElement("div"); // div tag
+
+            var img=document.createElement("img"); // img tag
+            if(el.img=el.img){
+                img.setAttribute("src",el.img);
+            }else{
+                img.setAttribute("src",el.image_url);
+            }
+            
+           
+
+            var h3=document.createElement("h5"); // name tag
+            h3.innerText=el.name;
+
+            var price1=document.createElement("p"); // price tag
+            price1.innerText="Price :"+el.price;
+
+            var btn=document.createElement("button");
+            btn.innerText="Delete"
+            btn.style.cursor="pointer"
+            btn.addEventListener("click" ,function(){
+                event.target.parentNode.remove();
+            })
+           
+         priceArr=priceArr+(+el.price);
+
+         
+            
+
+            div.append(img,h3,price1,btn); // all append data
+            var body=document.querySelector(".main");
+            body.append(div);
+        })
+        
+        var see=document.getElementById("see");
+        see.addEventListener("click",seeFun);
+        function seeFun(){
+            var totalPrice=document.getElementById("totalPrice");
+            totalPrice.innerText="Total Price : " +priceArr;
+        }
+
+        var appl=document.getElementById("applay");
+        appl.addEventListener("click",applay);
+       
+        var count=0;
+        function applay(){
+            count++;
+            var totalPrice=document.getElementById("totalPrice");
+            var promo=document.getElementById("promo").value;
+         console.log(priceArr);
+
+            if(count==1){
+                
+                if(promo=="MASAI30" || promo=="masai30"){
+                    var discount=(priceArr*30)/100;
+                    priceArr=priceArr-discount;
+                    totalPrice.innerText="Total Price : " +priceArr;
+                }
+                else if(promo==""){
+                    alert("Plese Enter Promo code")
+                    count=0;
+                }
+                else{
+                    var discount=(priceArr*10)/100;
+                    priceArr=priceArr-discount;
+                    totalPrice.innerText="Total Price : " +priceArr;
+                }
+            }
+            else{
+                alert("You are already Applyed Promocode!")
+            }
+        }
+        
+        
+    }
+   
+   
+    </script>
