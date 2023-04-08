@@ -1,0 +1,55 @@
+#logo{
+    display: flex;
+    margin: auto;
+    padding: 2% 0% 2% 0%;
+}
+
+.box, #btn{
+    width: 90%;
+    height: 40px;
+    border-radius: 9px;
+    margin-bottom: 44px;
+    padding-left: 8px;
+    font-size: 19px;
+}
+#btn:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+   
+}
+
+.container{
+    width: 35%;
+    height: auto;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1% 0% 4% 0%;
+}
+#heading{
+    text-align: center;
+    font-size: 23px;
+
+}
+#tag{
+    text-align: left;
+    margin: auto;
+    margin-left: 33px;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+#forget{
+    text-align: right;
+    margin: auto;
+    padding-right: 5%;
+    font-size: 19px;
+}
+#forget:hover{
+    color: blue;
+    cursor: pointer;
+}

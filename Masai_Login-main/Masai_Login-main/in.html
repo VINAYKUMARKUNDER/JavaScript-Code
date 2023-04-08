@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>sign page</title>
+</head>
+<body>
+   
+        <img src="https://sso.masaischool.com/brand_dark.svg" alt="" id="logo">
+     <div class="container">
+        <h3 id="heading">Sign In</h3>
+        
+        <p  id="tag">Email</p>
+        <input type="email" placeholder="Enter Email" class="box" id="email">
+        <br>
+        <p  id="tag">Password <p id="forget">Forgrt Password</p></p>
+        <input type="password" placeholder="Enter Passowrd"  class="box" id="password">
+        <button id="btn">SIGN IN</button>
+        <h4>Don't have an account? <a href="up.html">Sign Up</a></h4>
+    </div>
+</body>
+</html>
+
+    <script>
+        var data=localStorage.getItem("data");
+        console.log(data)
+
+        var btn =document.getElementById("btn");
+        btn.addEventListener("click", mapData);
+        function mapData(){
+            var email = document.getElementById("email").value;
+          
+
+            var password = document.getElementById("password").value;
+        }
+           
+
+    </script>

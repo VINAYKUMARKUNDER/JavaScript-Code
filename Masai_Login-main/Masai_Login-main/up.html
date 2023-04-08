@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login page</title>
+</head>
+<body>
+   
+        <img src="https://sso.masaischool.com/brand_dark.svg" alt="" id="logo">
+        <form class="container">
+        <h3 id="heading">Sign Up</h3>
+        
+        <p id="tag">Full name</p>
+        <input type="text" class="box" id="name" placeholder="Enter Name">
+        <br>
+        <p  id="tag">Email</p>
+        <input type="email"  class="box" id="email" placeholder="Enter Email">
+        <br>
+        <p  id="tag">Password</p>
+        <input type="password"  class="box" id="password" placeholder="enter Password">
+        <br>
+        <p>By signing up, I accept the Masai School <a href="https://masaischool.com/terms/">terms of Services</a>and acknowladge the <a href="https://masaischool.com/privacy/">Privrcy Policy.</a></p>
+        <button id="btn">SIGN UP</button>
+        <h4>Already have an account? <a href="in.html">Sign In</a></h4>
+        </form>
+</body>
+</html>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.addEventListener("click", runFunction);
+
+        var arrdata = [];
+        function runFunction(){
+            event.preventDefault();
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            // console.log(password);
+
+            var myObj={
+                Name:name,
+                Email:email,
+                Password:password
+            };
+
+            arrdata.push(myObj);
+            // console.log(arrdata);
+            localStorage.setItem("data",JSON.stringify(arrdata));
+        }
+
+       
+        
+    </script>
