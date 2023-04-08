@@ -1,0 +1,49 @@
+#navbar{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    background-color: blue;
+    height: 60px;
+}
+#navbar>h1{
+    width: 100%;
+   
+}
+h1>a{
+    color: white;
+    text-align: center;
+}
+
+#main{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    background-color: white;
+    height: auto;
+    padding: 10%;
+    grid-template-columns: repeat(3,1fr);
+
+
+}
+#main>div:nth-child(even)
+{
+    background-color: aqua;
+}
+#main>div:nth-child(odd)
+{
+    background-color: rgb(207, 236, 127);
+}
+
+.inputt{
+    padding-top: 3%;
+    width: 70%;
+    margin: auto;
+    
+
+}
+.head{
+    text-align: center;
+    color: teal;
+    font-size: 44px;
+}

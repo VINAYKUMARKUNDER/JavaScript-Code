@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+    <script>
+        //setItem, getItem, clear, removeItem
+        // JSON.stringify()
+        //JSON.parse()
+
+        // number
+        // localStorage.setItem("key","value")
+        
+        localStorage.setItem("mobile",7390016116);
+        localStorage.setItem("cvv",322);
+
+        //string
+
+        localStorage.setItem("name","chandra");
+        var std="karan";
+        localStorage.setItem("Sname",std);
+        
+        //localstorage ---> storage capacity 6 to 8 mb arround.
+
+        // local Storage will accept string and number value;
+
+        // getItem --> localStorage.getItem("key")
+        var getData= localStorage.getItem("mobile")
+        console.log(getData);
+
+        //whenwere you are trying to access something which is not thee will return null.
+
+        console.log(localStorage.getItem("std"))
+        localStorage.setItem("mobile",0000000000000)
+        localStorage.setItem("mobile",111111111111)
+
+    
+
+
+        </script>

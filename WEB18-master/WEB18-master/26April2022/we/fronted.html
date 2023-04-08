@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <h1><a href="fronted.html">Fronted</a> </h1>
+       <h1><a href="backend.html">Backend</a> </h1>
+    </div>
+    
+    <h1 class="head">This is Fronted</h1>
+    <div id="main">
+
+    </div>
+</body>
+</html>
+
+    <script>
+        var data=localStorage.getItem("myData");
+        console.log(data);
+
+        // for(var data=0;data<alldata;data++){
+
+        var img=document.createElement("img");
+        img.innerText=data.imgURL;
+
+        var h3=document.createElement("h3");
+        h3.innerText=data.name;
+
+        var p=document.createElement("p");
+        p.innerText=data.role;
+
+        var logo1=document.createElement("img");
+        logo1.innerText=data.logo;
+
+        var div=document.createElement("div");
+        div.append(img,h3,p,logo1);
+        
+
+        var div1=document.getElementById("main");
+        div1.append(div);
+       
+
+    </script>
