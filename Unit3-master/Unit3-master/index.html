@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>StudenData</title>
+</head>
+<body>
+    <h1 id="head">Masai Student</h1>
+
+    <form action="" id="form" onsubmit="submitData()">
+        <input type="text" id="name" placeholder="Enter Name"><br>
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <input type="text" id="url" placeholder="Enter image url"><br>
+
+        <select name="" id="course">
+            <option value="">Select Course</option>
+            <option value="FSD">FSD</option>
+            <option value="backend">Backend</option>
+            <option value="fronted">Fronted</option>
+        </select><br>
+
+        <select name="" id="unit">
+            <option value="">Select Unit</option>
+            <option value="unit-1">Unit-1</option>
+            <option value="unit-2">Unit-2</option>
+            <option value="unit-3">Unit-3</option>
+            <option value="unit-4">Unit-4</option>
+            <option value="unit-5">Unit-5</option>
+            <option value="unit-6">Unit-6</option>
+        </select><br>
+
+        <select name="" id="batch">
+            <option value="">Select Batch</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+        </select><br>
+  
+       <button id="btn">Add Data</button>
+      
+    </form>
+    <button id="btn2" onclick="see()">View Data</button>
+</body>
+</html>
+
+<script src="index.js"></script>
