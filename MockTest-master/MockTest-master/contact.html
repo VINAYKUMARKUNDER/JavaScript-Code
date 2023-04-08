@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="contact.html">Contact List</a></div>
+      <div><a href="favourites.html">Favourites</a></div>
+    </div>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Contact Name</th>
+            <th>Mobile Number</th>
+            <th>Type</th>
+            <th>Favourites</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+    //code your js part here
+    var contactList=JSON.parse(localStorage.getItem("contactList")) || [];
+    // console.log(contactList);
+
+    display(contactList);
+    function display(data){
+
+      data.forEach(function(el){
+
+        var tr=document.createElement("tr");
+
+        var td1=document.createElement("td");
+        td1.innerText=el.name;
+
+        var td2=document.createElement("td");
+        td2.innerText=el.mobile;
+
+        var td3=document.createElement("td");
+        td3.innerText=el.type;
+
+        var td4=document.createElement("td");
+        td4.innerText="favourite"
+        td4.style.color="blue"
+        td4.style.cursor="pointer";
+        td4.addEventListener("click", function(){
+          favourite(el);
+        })
+        
+        tr.append(td1,td2,td3,td4);
+
+        var body=document.querySelector("tbody");
+
+        body.append(tr);
+
+      })
+
+      var favData=[];
+      var count=0;
+      function favourite(el){
+        count++;
+        if(count==1){
+          alert("favtrate Section Added")
+        }else{
+          alert("already added!")
+          count=0;
+        }
+        // console.log(count);
+        // console.log(el);
+        favData.push(el);
+        localStorage.setItem("favourite",JSON.stringify(favData));
+      }
+     
+    }
+
+   
+
+    
+  </script>
+</html>
