@@ -15,16 +15,17 @@ function navbar(){
                 <li class="nav-item"> 
                  <a class="nav-link text-white" href="createNewUser.html">New User</a>
                  </li>
+				 <li class="nav-item">
+					<a class="nav-link text-white" href="User.html">Users</a>
+				</li>
 
                 <li class="nav-item">
                 <a class="nav-link text-white" href="createNewPost.html">New Post</a>
                 </li>
 
-				<li class="nav-item">
-					<a class="nav-link text-white" href="User.html">User</a>
-				</li>
+				
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="post.html">Post</a>
+                    <a class="nav-link text-white" href="post.html">Posts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="UserAnalytics.html">User Analytics</a>
