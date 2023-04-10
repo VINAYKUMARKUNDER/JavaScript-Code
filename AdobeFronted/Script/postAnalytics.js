@@ -14,7 +14,7 @@ function getTotalPosts() {
 
   const show = document.getElementById("show");
 
-  fetch("http://localhost:8080/posts/analytics/posts/top-liked")
+  fetch("https://social-media-platform-system-production.up.railway.app/posts/analytics/posts/top-liked")
     .then((response) => response.json())
     .then((posts) => {
       appendData(posts);
