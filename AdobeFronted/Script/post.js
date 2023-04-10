@@ -1,7 +1,7 @@
 const show = document.getElementById("show");
 
-fetch("https://social-media-platform-system-produposts/")
-  .then((ction.up.railway.app/response) => response.json())
+fetch("https://social-media-platform-system-production.up.railway.app/posts/")
+  .then((response) => response.json())
   .then((posts) => {
     appendData(posts);
   })
@@ -9,7 +9,7 @@ fetch("https://social-media-platform-system-produposts/")
 
 let appendData=(data)=> {
   let postList = document.getElementById("card");
-
+console.log(data)
   data.forEach((el)=> {
 
     let id = el.id;
