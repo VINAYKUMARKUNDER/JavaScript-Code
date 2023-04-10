@@ -31,6 +31,8 @@ console.log(data)
       text.classList.add("card-text");
       text.innerText=content;
 
+      text.style.fontWeight = "600";
+
       
     
     let editBtn = document.createElement("button");

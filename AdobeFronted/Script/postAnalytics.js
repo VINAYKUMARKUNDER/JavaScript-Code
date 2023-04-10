@@ -44,7 +44,7 @@ function getTotalPosts() {
         let text = document.createElement('p');
         text.classList.add("card-text");
         text.innerText=content;
-  
+        text.style.fontWeight = "600";
         
       
       let editBtn = document.createElement("button");
