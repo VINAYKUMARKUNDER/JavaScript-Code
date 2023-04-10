@@ -9,12 +9,77 @@
 	<!-- Navigation Bar -->
 	<nav id="navbar"></nav>
 
-	<!-- Page Content -->
-	<div class="container mt-5">
-		<h1>Welcome to My Social Media Platform</h1>
-		<p>This is a simple social media platform created using Vanilla JS, Spring Boot, and MySQL.</p>
-		<p>Use the navigation bar to access different parts of the application.</p>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link text-danger h2" href="https://adobe-fronted-vinaykumarkunder.vercel.app/">Frontend Live</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-primary h2" href="https://github.com/VINAYKUMARKUNDER/JavaScript-Code/tree/main/AdobeFronted">Frontend Code</a>
+			  </li>
+			  <li class="nav-item">
+				  <a class="nav-link text-danger h2" href="https://social-media-platform-system-production.up.railway.app/posts/">API Endpoints</a>
+				</li>
+			<li class="nav-item">
+			  <a class="nav-link text-primary h2" href="https://github.com/VINAYKUMARKUNDER/Social-Media-Platform-System">Backend Code</a>
+			</li>
+			
+			
+		  </ul>
+		</div>
+	  </nav>
+  
+	  <div class="container-fluid mt-5">
+		<!-- Backend Section -->
+		<section id="backend">
+		 
+		  
+		  <h2>Technologies Used</h2>
+		  <ul>
+			<li>Java</li>
+			<li>Spring Boot</li>
+			<li>MySQL</li>
+			<li>Hibernate</li>
+			<li>Model Mapper</li>
+			<li>Validation</li>
+		  </ul>
+		  <h2>Functionality</h2>
+		  <p>
+			The backend of the project was built using Java and the Spring Boot
+			framework. The backend provides RESTful API endpoints for the frontend
+			to communicate with the database. Data is stored in a MySQL database.
+		  </p>
+
+		  <ul>
+			<li>GET /users/ - Returns a list of all users in the system.</li>
+			<li>GET /users/{id} - Returns the details of a specific user with the given ID.</li>
+			<li>POST /users/ - Creates a new user in the system.</li>
+			<li>PUT /users/{id} - Updates the details of a specific user with the given ID.</li>
+			<li>DELETE /users/{id} - Deletes the user with the given ID from the system.</li>
+			<li>GET /posts/ - Returns a list of all posts in the system.</li>
+			<li>GET /analytics/users - Returns a number of all users in the system.</li>
+			<li>GET /analytics/users/top-active - Returns a top 5 user who's create max posts users in the system.</li>
+			<li>GET /posts/{id} - Returns the details of a specific post with the given ID.</li>
+			<li>POST /posts/ - Creates a new post in the system.</li>
+			<li>PUT /posts/{id} - Updates the details of a specific post with the given ID.</li>
+			<li>DELETE /posts/{id} - Deletes the post with the given ID from the system.</li>
+			<li>POST /posts/{id}/like - Likes the post with the given ID.</li>
+			<li>POST /posts/{id}/unlike - Removes the like from the post with the given ID.</li>
+			<li>GET /posts/analytics/posts - Returns a number of all posts in the system..</li>
+			<li>GET /post/analytics/posts/top-liked - Returns a top 5 posts who's liked by max users  in the system.</li>
+		</ul>
+
+		  <h2>Database Schema</h2>
+		  <p>
+			The database consists of three tables: users, posts, and comments. The
+			schema is as follows:
+		  </p>
+		  <img src="https://i.ibb.co/whG2SRt/social-scema.png" alt="Database Schema" />
+		</section>
+  
+	
 
 	<!-- Include Bootstrap JS here -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
