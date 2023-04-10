@@ -21,7 +21,7 @@ let createOrUpdatePost=()=>{
     if (userId !== null && content !== null){
      
         const post={
-            userId:document.getElementById('userId').value,
+            // userId:document.getElementById('userId').value,
             content: document.getElementById('content').value
 
         }
@@ -71,6 +71,7 @@ let createPost = () => {
 
 // Update Post
 let updatePost=(postId, post)=> {
+
     fetch(`https://social-media-platform-system-production.up.railway.app/posts/${postId}`, {
       method: 'PUT',
       headers: {

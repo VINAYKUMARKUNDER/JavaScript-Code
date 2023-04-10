@@ -36,17 +36,29 @@ let updateUser = () => {
     bio: document.getElementById("bio").value,
   };
 
-  fetch(`https://social-media-platform-system-production.up.railway.app/users/${userId}`, {
+  
+
+ fetch(`https://social-media-platform-system-production.up.railway.app/users/${userId}`, {
     method: "PUT",
     headers: {
+  
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(user),
+    body: JSON.stringify({
+      email:email,
+      name: name,
+      bio: bio,
+    }),
+    
   })
-    .then((response) => response.json())
+    .then((response) => {
+      console.log(user)
+      alert('ruk jao')
+      response.json()
+    })
     .then((data) => {
         alert(`${data.name}'s data update successfully!!`);
-        setTimeout(    window.location.href = `userProfile.html?id=${data.id}`, 3000);
+       window.location.href = `userProfile.html?id=${data.id}`
     })
     .catch((error) => console.error(error));
 };
