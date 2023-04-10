@@ -63,6 +63,25 @@ function getTotalUsers() {
 
 
 
+// delete user data
+let deleteUser = (userId) => {
+  // console.log(userId)
+  const url = `https://social-media-platform-system-production.up.railway.app/users/${userId}`;
+
+  fetch(url, {
+    method: 'DELETE'
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    // Delete successful, do something here if necessary
+    else alert('User deleted successfully');
+  })
+  .catch(error => {
+    alert('User is created posts first deleted all user post', error);
+  });
+}
 
 
 
