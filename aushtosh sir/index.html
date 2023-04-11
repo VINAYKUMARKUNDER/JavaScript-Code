@@ -48,7 +48,7 @@
 	
 	<div class="container">
     <div class="p-3 mb-2 bg-warning text-dark text-center" id="app">Application Form</div>
-		<form id="form" onsubmit="sendEmail()">
+		<form id="form">
 			<div class="form-group">
 				<label for="first-name" id="firstName">First Name</label>
 				<input type="text" class="form-control" id="first-name" placeholder="Enter First Name" required>
@@ -58,11 +58,11 @@
 				<input type="text" class="form-control" id="last-name" placeholder="Enter Last Name" required>
 			</div>
 			<div class="form-group">
-				<label for="email" id="email">Email</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+				<label for="email" id="emailData">Email</label>
+				<input type="text" class="form-control" id="email" placeholder="Enter Email" required>
 			</div>
 			<div class="form-group">
-				<label for="phone" id="phone">Phone</label>
+				<label for="phone" id="mobile">Phone</label>
 				<input type="tel" class="form-control" id="phone" placeholder="Enter Phone" required>
 			</div>
 			<div class="form-group">
@@ -99,10 +99,10 @@
 				<input type="date" class="form-control" id="join-date" placeholder="Enter Joining Date" required>
 			</div>
 			<div class="form-group">
-				<label for="resume" id="resume">Upload Resume</label>
+				<label for="resume" id="resumeFile">Upload Resume</label>
 				<input type="file" class="form-control-file" id="resume" required>
 			</div>
-			<button type="submit"  id="button" class="btn btn-primary">Submit</button>
+			<button type="button" onclick="sendEmail()"  id="button" class="btn btn-primary">Submit</button>
 		</form>
 
     <footer class="footer mt-auto py-3">
@@ -143,32 +143,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
 	<script src="index.js"></script>
 
-<!-- <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  emailjs.init('IGV8WgbvfwBghY2tA')
-</script> -->
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
 
-<!-- <script>
-
-	function sendEmail(){
-		Email.send({
-			Host : "smtp.gmail.com",
-			Username : "vinay3000111@gmail.com",
-			Password : "Vinay@1313",
-			To : 'vinay30001111@gmail.com',
-			From : document.getElementById("email").value,
-			Subject : "This is the subject",
-			Body : "And this is the body"
-		}).then(
-		  message => alert("message")
-		);
-	}
-
-</script> -->
 
 
 </body>
