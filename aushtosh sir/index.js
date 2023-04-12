@@ -16,7 +16,7 @@ function sendEmail(){
 
   let body = "Name: "+ firstName +" "+lastName+"<br/> Email: "+ email1+" <br/> Phone: "+phone +"<br/> Experience: "+experience+"<br/> Notice Period: "+
    noticePeriod+"<br/> Current Designation: "+currentDesignation +"<br/> Current CTC: "+currentCTC+
-   "<br/> Expected CTC: "+expectedCTC+" <br/> Join Date: "+ joinDate+"<br/> Resume: "+resume;
+   "<br/> Expected CTC: "+expectedCTC+" <br/> Join Date: "+ joinDate;
 
 //    attachment
   Email.send({
@@ -27,6 +27,7 @@ function sendEmail(){
     To : 'kunder.intertenment63@gmail.com',
     From : "kunder.intertenment63@gmail.com",
     Subject : "Contect From",
+    attachment: resume,
     Body : body
   }).then(
   message => alert("Thanks for submit from soon be conect you.")
