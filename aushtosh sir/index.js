@@ -50,8 +50,7 @@ function sendEmail(){
 
 
 
-//   let joinDate = document.getElementById('join-date').value;
-//   let resume = document.getElementById('resume').files[0];
+
 
 //   let body = "Name: " + firstName + " " + lastName + "<br/> Email: " + email1 + " <br/> Phone: " + phone + "<br/> Experience: " + experience + "<br/> Notice Period: " +
 //     noticePeriod + "<br/> Current Designation: " + currentDesignation + "<br/> Current CTC: " + currentCTC +
