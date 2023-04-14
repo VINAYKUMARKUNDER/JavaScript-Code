@@ -63,9 +63,8 @@ function sendEmail(){
 
 
 
-//         name: resume.name,
-//         data: formData
-//       }
+
+
 //     ]
 //   }).then(
 //     message => alert("Thanks for submitting the form. We will get in touch with you soon.")
