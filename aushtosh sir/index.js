@@ -47,8 +47,8 @@ function sendEmail(){
 
 
 
-//   let noticePeriod = document.getElementById('notice-period').value;
-//   let currentDesignation = document.getElementById('current-designation').value;
+
+
 //   let currentCTC = document.getElementById('current-ctc').value;
 //   let expectedCTC = document.getElementById('expected-ctc').value;
 //   let joinDate = document.getElementById('join-date').value;
