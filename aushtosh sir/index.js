@@ -65,10 +65,7 @@ function sendEmail(){
 
 
 
-//     ]
-//   }).then(
-//     message => alert("Thanks for submitting the form. We will get in touch with you soon.")
-//   );
-// }
+
+
 
  
