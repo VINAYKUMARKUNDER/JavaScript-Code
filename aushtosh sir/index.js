@@ -44,8 +44,7 @@ function sendEmail(){
 
 
 
-//   let lastName = document.getElementById('last-name').value;
-//   let email1 = document.getElementById('email').value;
+
 //   let phone = document.getElementById('phone').value;
 //   let experience = document.getElementById('experience').value;
 //   let noticePeriod = document.getElementById('notice-period').value;
