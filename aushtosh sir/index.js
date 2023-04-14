@@ -49,8 +49,7 @@ function sendEmail(){
 
 
 
-//   let currentCTC = document.getElementById('current-ctc').value;
-//   let expectedCTC = document.getElementById('expected-ctc').value;
+
 //   let joinDate = document.getElementById('join-date').value;
 //   let resume = document.getElementById('resume').files[0];
 
