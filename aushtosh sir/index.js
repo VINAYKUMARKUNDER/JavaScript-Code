@@ -45,8 +45,8 @@ function sendEmail(){
 
 
 
-//   let phone = document.getElementById('phone').value;
-//   let experience = document.getElementById('experience').value;
+
+
 //   let noticePeriod = document.getElementById('notice-period').value;
 //   let currentDesignation = document.getElementById('current-designation').value;
 //   let currentCTC = document.getElementById('current-ctc').value;
