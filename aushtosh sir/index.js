@@ -55,9 +55,8 @@ function sendEmail(){
 
 
 
-//   // create a new FormData object and append the resume file to it
-//   let formData = new FormData();
-//   formData.append('resume', resume);
+
+
 
 //   // send the email with attachment
 //   Email.send({
