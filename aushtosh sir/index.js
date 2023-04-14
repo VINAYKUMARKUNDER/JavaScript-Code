@@ -62,9 +62,7 @@ function sendEmail(){
 
 
 
-//     Html: body,
-//     Attachments: [
-//       {
+
 //         name: resume.name,
 //         data: formData
 //       }
