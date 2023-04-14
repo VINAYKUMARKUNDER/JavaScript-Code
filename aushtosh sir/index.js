@@ -52,9 +52,8 @@ function sendEmail(){
 
 
 
-//   let body = "Name: " + firstName + " " + lastName + "<br/> Email: " + email1 + " <br/> Phone: " + phone + "<br/> Experience: " + experience + "<br/> Notice Period: " +
-//     noticePeriod + "<br/> Current Designation: " + currentDesignation + "<br/> Current CTC: " + currentCTC +
-//     "<br/> Expected CTC: " + expectedCTC + " <br/> Join Date: " + joinDate;
+
+
 
 //   // create a new FormData object and append the resume file to it
 //   let formData = new FormData();
