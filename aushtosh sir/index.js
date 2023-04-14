@@ -60,10 +60,6 @@ function sendEmail(){
 
 
 
-
-//     Host : "smtp.elasticemail.com",
-//     SecureToken: "b3bf9dc7-ca62-4b69-982e-7ab96bfe7540", // use your own SecureToken here
-//     To: 'ashutosh2023singh@gmail.com',
 //     From: "ashutosh2023singh@gmail.com",
 //     Subject: "Contact Form",
 //     Html: body,
