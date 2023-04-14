@@ -10,38 +10,37 @@ function sendEmail(){
   let expectedCTC = document.getElementById('expected-ctc').value;
   let joinDate = document.getElementById('join-date').value;
   let resume = document.getElementById('resume').files[0];
-  console.log(resume)
+  var fileName = document.getElementById('resume').files[0].name;
   
-
-  // if(phone.length()!==10)alert("phone number must be 10 digi")
-
   let body = "Name: "+ firstName +" "+lastName+"<br/> Email: "+ email1+" <br/> Phone: "+phone +"<br/> Experience: "+experience+"<br/> Notice Period: "+
    noticePeriod+"<br/> Current Designation: "+currentDesignation +"<br/> Current CTC: "+currentCTC+
    "<br/> Expected CTC: "+expectedCTC+" <br/> Join Date: "+ joinDate;
 
-   let formData = new FormData();
-//    formData.append('resume', "Vinay");
-//    console.log(formData)
-//    attachment
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "ashutosh2023singh@gmail.com",
-    Password : "B4B77067B2634EC94AEFC7854CBB2691CE92",
-    // SecureToken :"1bb21ca4-0280-46ed-99ad-2820fec00936",
-    To : 'ashutosh2023singh@gmail.com',
-    From : "ashutosh2023singh@gmail.com",
-    Subject : "Contect From",
-    Attachments: resume,
-    Body : body,
-    Attachments: [
+  // Convert file to base64-encoded string
+  let reader = new FileReader();
+  reader.readAsDataURL(resume);
+  reader.onload = function () {
+    let pdfBase64 = reader.result.split(",")[1];
+
+    // Send email with attachment
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "ashutosh2023singh@gmail.com",
+      Password : "B4B77067B2634EC94AEFC7854CBB2691CE92",
+      To : 'ashutosh2023singh@gmail.com',
+      From : "ashutosh2023singh@gmail.com",
+      Subject : "Contact Form",
+      Attachments: [
         {
-        //   name: resume.name,
-        //   data: formData
+          name: fileName,
+          data: pdfBase64
         }
-      ]
-  }).then(
-  message => alert("Thanks for submit from soon be conect you.")
-  );
+      ],
+      Body : body
+    }).then(
+      message => alert("Thanks for submitting your form. We will soon be in touch with you.")
+    );
+  };
 }
 
 
