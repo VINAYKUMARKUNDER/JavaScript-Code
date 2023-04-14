@@ -1,179 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sample Form</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="index.css">
-</head>
-<body>
-	<nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="https://aaxlejobz.com/">
-	  	<img src="aaxle.png" alt="Logo" width="100" height="40">
-	  </a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-	    <ul class="navbar-nav ml-auto">
-	      <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/">Home</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/About/45/page">About</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/services">Services</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/team">Features</a>
-	      </li>
-        <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/career">Career</a>
-	      </li>
-        <li class="nav-item">
-	        <a class="nav-link" href="https://aaxlejobz.com/contact">Contact</a>
-	      </li>
-        <li class="nav-item">
-	        <a class="nav-link" href="https://job.aaxlejobz.com/job-openings/">Job</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
 
+    <style>
+      .form-group label {
+        font-weight: bold;
+      }
 
+      #app {
+        font-size: 20px;
+        font-weight: bold;
+      }
 
-
-	
-	<div class="container">
-    <div class="p-3 mb-2 bg-warning text-dark text-center" id="app">Application Form</div>
-		<form id="form">
-			<div class="form-group">
-				<label for="first-name" id="firstName">First Name</label>
-				<input type="text" class="form-control" id="first-name" placeholder="Enter First Name"  >
-			</div>
-			<div class="form-group">
-				<label for="last-name" id="lastName">Last Name</label>
-				<input type="text" class="form-control" id="last-name" placeholder="Enter Last Name"  >
-			</div>
-			<div class="form-group">
-				<label for="email" id="emailData">Email</label>
-				<input type="text" class="form-control" id="email" placeholder="Enter Email"  >
-			</div>
-			<div class="form-group">
-				<label for="phone" id="mobile">Phone</label>
-				<input type="tel" class="form-control" id="phone" placeholder="Enter Phone"  >
-			</div>
-			<div class="form-group">
-				<label for="experience" id="totalExp">Total Experience</label>
-				<input type="number" class="form-control" id="experience" placeholder="Enter Total Experience"  >
-			</div>
-			<div class="form-group">
-				<label for="notice-period" id="noticePeriod">Notice Period</label>
-				<select class="form-control" id="notice-period"  >
-				  <option value="">Select Notice Period</option>
-          <option value="0">Immediate Join</option>
-				  <option value="15">15 Days</option>
-				  <option value="30">30 Days</option>
-				  <option value="45">45 Days</option>
-				  <option value="60">60 Days</option>
-          <option value="90">90 Days</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="current-designation" id="currentDesignation">Current Designation</label>
-				<input type="text" class="form-control"
-        id="current-designation" placeholder="Enter Current Designation"  >
-			</div>
-			<div class="form-group">
-				<label for="current-ctc" id="currentCTC">Current CTC</label>
-				<input type="number" class="form-control" id="current-ctc" placeholder="Enter Current CTC"  >
-			</div>
-			<div class="form-group">
-				<label for="expected-ctc" id="expectedCTC">Expected CTC</label>
-				<input type="number" class="form-control" id="expected-ctc" placeholder="Enter Expected CTC"  >
-			</div>
-			<div class="form-group">
-				<label for="join-date" id="joinDate">When can you join us?</label>
-				<input type="date" class="form-control" id="join-date" placeholder="Enter Joining Date"  >
-			</div>
-			<div class="form-group">
-				<label for="resume" id="resumeFile">Upload Resume</label>
-				<input type="file" class="form-control-file" id="resume"  >
-			</div>
-			<button type="button" onclick="sendEmail()"  id="button" class="btn btn-primary">Submit</button>
-		</form>
-
-    <footer class="footer mt-auto py-3">
-      <div class="p-3 mb-2 bg-dark text-dark text-center">
-        <span class="text-muted">copyright &copy; 2023 aaxlejobz. All rights reserved.</span>
+      @media only screen and (max-width: 767px) {
+        .container {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://aaxlejobz.com/">
+        <img src="aaxle.png" alt="Logo" width="100" height="40" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/About/45/page"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/services"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/team">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/career">Career</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://aaxlejobz.com/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://job.aaxlejobz.com/job-openings/"
+              >Job</a
+            >
+          </li>
+        </ul>
       </div>
-    </footer>
-	</div>
+    </nav>
 
-  <div
-  class="modal fade"
-  id="popupModal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="popupModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
+    <div class="container">
+      <div class="p-3 mb-2 bg-warning text-dark text-center" id="app">
+        Application Form
+      </div>
+      <form id="form">
+        <div class="form-group">
+          <label for="first-name" id="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first-name"
+            placeholder="Enter First Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="last-name" id="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="last-name"
+            placeholder="Enter Last Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" id="emailData">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone" id="mobile">Phone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="Enter Phone"
+          />
+        </div>
+        <div class="form-group">
+          <label for="experience" id="totalExp">Total Experience</label>
+          <input
+            type="number"
+            class="form-control"
+            id="experience"
+            placeholder="Enter Total Experience"
+          />
+        </div>
+        <div class="form-group">
+          <label for="notice-period" id="noticePeriod">Notice Period</label>
+          <select class="form-control" id="notice-period">
+            <option value="">Select Notice Period</option>
+            <option value="0">Immediate Join</option>
+            <option value="15">15 Days</option>
+            <option value="30">30 Days</option>
+            <option value="45">45 Days</option>
+            <option value="60">60 Days</option>
+            <option value="90">90 Days</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="current-designation" id="currentDesignation"
+            >Current Designation</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="current-designation"
+            placeholder="Enter Current Designation"
+          />
+        </div>
+        <div class="form-group">
+          <label for="current-ctc" id="currentCTC">Current CTC</label>
+          <input
+            type="number"
+            class="form-control"
+            id="current-ctc"
+            placeholder="Enter Current CTC"
+          />
+        </div>
+        <div class="form-group">
+          <label for="expected-ctc" id="expectedCTC">Expected CTC</label>
+          <input
+            type="number"
+            class="form-control"
+            id="expected-ctc"
+            placeholder="Enter Expected CTC"
+          />
+        </div>
+        <div class="form-group">
+          <label for="join-date" id="joinDate">When can you join us?</label>
+          <input
+            type="date"
+            class="form-control"
+            id="join-date"
+            placeholder="Enter Joining Date"
+          />
+        </div>
+        <div class="form-group">
+          <label for="resume" id="resumeFile">Upload Resume</label>
+          <input type="file" class="form-control-file" id="resume" />
+        </div>
         <button
           type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
+          onclick="sendEmail()"
+          id="button"
+          class="btn btn-primary"
         >
-          <span aria-hidden="true">&times;</span>
+          Submit
         </button>
-        <span id="popup-message"></span>
+      </form>
+
+      <footer class="footer mt-auto py-3">
+        <div class="p-3 mb-2 bg-dark text-dark text-center">
+          <span class="text-muted"
+            >copyright &copy; 2023 aaxlejobz. All rights reserved.</span
+          >
+        </div>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="popupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="popupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <span id="popup-message"></span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-	<script  src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 
-	<script>
-		const fileInput = document.getElementById('resume');
-		const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20 MB in bytes
-		const ALLOWED_FILE_TYPES = ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'];
-		
-		fileInput.addEventListener('change', (event) => {
-		  const file = event.target.files[0];
-		  const fileType = file.type.split('/')[1];
-		  const fileSize = file.size;
-		  
-		  // Check if file type is allowed
-		  if (!ALLOWED_FILE_TYPES.includes(fileType)) {
-			alert('Only PDF, JPG, PNG, DOC, and DOCX files are allowed.');
-			fileInput.value = ''; // Clear the file input
-			return;
-		  }
-		  
-		  // Check if file size is within limit
-		  if (fileSize > MAX_FILE_SIZE) {
-			alert('File size should be less than 20 MB.');
-			fileInput.value = ''; // Clear the file input
-			return;
-		  }
-		  
-		  // If both checks pass, you can proceed with uploading the file
-		});
-	  </script>
-	  
-	  <script src="https://smtpjs.com/v3/smtp.js">
-	</script>
+    <script>
+      const fileInput = document.getElementById("resume");
+      const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20 MB in bytes
+      const ALLOWED_FILE_TYPES = ["pdf", "jpg", "jpeg", "png", "doc", "docx"];
 
+      fileInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        const fileType = file.type.split("/")[1];
+        const fileSize = file.size;
 
-</body>
+        // Check if file type is allowed
+        if (!ALLOWED_FILE_TYPES.includes(fileType)) {
+          alert("Only PDF, JPG, PNG, DOC, and DOCX files are allowed.");
+          fileInput.value = ""; // Clear the file input
+          return;
+        }
+
+        // Check if file size is within limit
+        if (fileSize > MAX_FILE_SIZE) {
+          alert("File size should be less than 20 MB.");
+          fileInput.value = ""; // Clear the file input
+          return;
+        }
+
+        // If both checks pass, you can proceed with uploading the file
+      });
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      function sendEmail() {
+        let firstName = document.getElementById("first-name").value;
+        let lastName = document.getElementById("last-name").value;
+        let email1 = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let experience = document.getElementById("experience").value;
+        let noticePeriod = document.getElementById("notice-period").value;
+        let currentDesignation = document.getElementById(
+          "current-designation"
+        ).value;
+        let currentCTC = document.getElementById("current-ctc").value;
+        let expectedCTC = document.getElementById("expected-ctc").value;
+        let joinDate = document.getElementById("join-date").value;
+        let resume = document.getElementById("resume").files[0];
+        var fileName = document.getElementById("resume").files[0].name;
+
+        let body =
+          "Name: " +
+          firstName +
+          " " +
+          lastName +
+          "<br/> Email: " +
+          email1 +
+          " <br/> Phone: " +
+          phone +
+          "<br/> Experience: " +
+          experience +
+          "<br/> Notice Period: " +
+          noticePeriod +
+          "<br/> Current Designation: " +
+          currentDesignation +
+          "<br/> Current CTC: " +
+          currentCTC +
+          "<br/> Expected CTC: " +
+          expectedCTC +
+          " <br/> Join Date: " +
+          joinDate;
+
+        // Convert file to base64-encoded string
+        let reader = new FileReader();
+        reader.readAsDataURL(resume);
+        reader.onload = function () {
+          let pdfBase64 = reader.result.split(",")[1];
+
+          // Send email with attachment
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "ashutosh2023singh@gmail.com",
+            Password: "B4B77067B2634EC94AEFC7854CBB2691CE92",
+            To: "ashutosh2023singh@gmail.com",
+            From: "ashutosh2023singh@gmail.com",
+            Subject: "Contact Form",
+            Attachments: [
+              {
+                name: fileName,
+                data: pdfBase64,
+              },
+            ],
+            Body: body,
+          }).then((message) =>
+            alert(
+              "Thanks for submitting your form. We will soon be in touch with you."
+            )
+          );
+        };
+      }
+    </script>
+  </body>
 </html>
