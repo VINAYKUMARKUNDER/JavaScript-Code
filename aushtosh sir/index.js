@@ -22,6 +22,7 @@ function sendEmail(){
   reader.onload = function () {
     let pdfBase64 = reader.result.split(",")[1];
 
+    // Send email with attachment
     Email.send({
       Host : "smtp.elasticemail.com",
       Username : "ashutosh2023singh@gmail.com",
@@ -41,4 +42,5 @@ function sendEmail(){
     );
   };
 }
+
 
